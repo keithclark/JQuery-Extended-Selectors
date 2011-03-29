@@ -6,7 +6,6 @@
  */
 
 (function($) {
-	
 	function getNthIndex(cur, dir) {
 		var t = cur, idx = 0;
 		while (cur = cur[dir] ) {
@@ -19,7 +18,6 @@
 
 	function isNthOf(elm, pattern, dir) {
 		var position = getNthIndex(elm, dir), loop;
-		
 		if (pattern == "odd" || pattern == "even") {
 			loop = 2;
 			position -= !(pattern == "odd");
@@ -29,8 +27,8 @@
 				loop = parseInt(pattern, 10);
 				position -= (parseInt(pattern.substring(nth + 1), 10) || 0) - 1;
 			} else {
-				loop = position;
-				position -= parseInt(pattern) - 1;
+				loop = position + 1;
+				position -= parseInt(pattern, 10) - 1;
 			}
 		}
 		return (loop<0 ? position<=0 : position >= 0) && position % loop == 0
@@ -53,6 +51,5 @@
 			return isNthOf(elm, match[3], "nextSibling");
 		}		
 	}
-	
 	$.extend($.expr[':'], pseudos);
 }(jQuery));
