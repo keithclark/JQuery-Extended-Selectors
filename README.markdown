@@ -8,16 +8,15 @@ This jQuery "plugin" adds support for the following CSS3 pseudo-class selectors 
 * :nth-of-type
 * :nth-last-of-type
 
-The project was written to service the needs of **selectivizr** users, but it can be used in any project based on the jQuery library.
+The project was written to service the needs of **selectivizr** users but it can be used in any project based on the jQuery library.
 
 
 ##Using the script##
 
-Before using the script, you'll need to include it in your page. Make sure you add it **after** the main jQuery script. Once included, you'll be able to use the selectors above in your jQuery statements.
-<pre>
+Before using the script you'll need to include it in your page (shown below). Make sure you add it **after** the main jQuery script. Once included, you'll be able to use the selectors above in your jQuery statements.
+
 	<script src="{path}/jquery.js"></script>
-	<script src="{path}/jquery-extra-selectors.js"></script>
-</pre>
+	<script src="{path}/jquery-extended-selectors.js"></script>
 
 ###Examples###
 
