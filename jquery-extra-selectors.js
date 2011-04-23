@@ -24,7 +24,7 @@
 		} else {
 			var nth = pattern.indexOf("n");
 			if (nth > -1) {
-				loop = parseInt(pattern, 10);
+				loop = parseInt(pattern, 10) || parseInt(pattern.substring(0, nth) + "1", 10);
 				position -= (parseInt(pattern.substring(nth + 1), 10) || 0) - 1;
 			} else {
 				loop = position + 1;
@@ -44,7 +44,7 @@
 		"only-of-type": function(elm) { 
 			return pseudos["first-of-type"](elm) && pseudos["last-of-type"](elm);
 		},
-		"nth-of-type": function(elm, b, match, all) {
+		"nth-of-type": function(elm, i, match) {
 			return isNthOf(elm, match[3], "previousSibling");
 		},
 		"nth-last-of-type": function(elm, i, match) {
