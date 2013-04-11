@@ -1,0 +1,5 @@
+{
+  "name": "JQuery-Extended-Selectors",
+  "version": "1.0.0",
+  "main": ["jquery-extra-selectors.js"]
+}
